@@ -108,12 +108,22 @@ public class CadastroPedido extends javax.swing.JFrame {
         });
 
         orderClient.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        orderClient.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                orderClientActionPerformed(evt);
+            }
+        });
 
         btnXfrango.setText("X-frango");
 
         btnXvegan.setText("X-vegan");
 
         btnArtesanal.setText("Artesanal Gourmet");
+        btnArtesanal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnArtesanalActionPerformed(evt);
+            }
+        });
 
         btnBacon.setText("Super Bacon");
 
@@ -128,6 +138,11 @@ public class CadastroPedido extends javax.swing.JFrame {
         });
 
         btnSaveOrder.setText("Salvar");
+        btnSaveOrder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSaveOrderActionPerformed(evt);
+            }
+        });
 
         btnCancelOrder.setText("Cancelar");
 
@@ -228,6 +243,25 @@ public class CadastroPedido extends javax.swing.JFrame {
     private void txtDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDetailsActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDetailsActionPerformed
+
+    private void orderClientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_orderClientActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_orderClientActionPerformed
+
+    private void btnArtesanalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnArtesanalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnArtesanalActionPerformed
+
+    private void btnSaveOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveOrderActionPerformed
+        Pedido p1 = new Pedido();
+        
+        if(btnXtudao.isSelected()) p1.setxTudo((int) Xtudaoqtn.getValue());
+        if(btnXfrango.isSelected()) p1.setxFrango((int) xfrangoqnt.getValue());
+        if(btnXvegan.isSelected()) p1.setxVegan((int) veganqnt.getValue());
+        if(btnXAVC.isSelected()) p1.setxAVC((int) avcqnt.getValue());
+        if(btnArtesanal.isSelected()) p1.setArtesanalGourmet((int) artesanalqnt.getValue());
+        if(btnBacon.isSelected()) p1.setSuperBacon((int) baconqnt.getValue());
+    }//GEN-LAST:event_btnSaveOrderActionPerformed
 
     /**
      * @param args the command line arguments

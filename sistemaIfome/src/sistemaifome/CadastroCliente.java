@@ -113,6 +113,11 @@ public class CadastroCliente extends javax.swing.JFrame {
         jLabel7.setText("Complemento");
 
         btnSave.setText("Salvar");
+        btnSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSaveActionPerformed(evt);
+            }
+        });
 
         btnCancel.setText("Cancelar");
 
@@ -201,6 +206,18 @@ public class CadastroCliente extends javax.swing.JFrame {
     private void txtCustomerNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCustomerNameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCustomerNameActionPerformed
+
+    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
+        Cliente c1 = new Cliente();
+        
+        c1.setNome(txtCustomerName.getText());
+        c1.setRua(txtCustomerStreet.getText());
+        c1.setComplemento(txtCustomerComplem.getText());
+        c1.setNumero(Integer.valueOf(txtCustomerNumber.getText()));
+        c1.setTelefone(Integer.valueOf(txtCustomerPhone.getText()));
+        c1.setCep(Integer.valueOf(txtCustomerZip.getText()));
+        
+    }//GEN-LAST:event_btnSaveActionPerformed
 
     /**
      * @param args the command line arguments
