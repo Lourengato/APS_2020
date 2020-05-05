@@ -29,10 +29,16 @@ public class MenuInicial extends javax.swing.JFrame {
 
         btnCustomerRegister = new javax.swing.JButton();
         btnOrderRegister = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setResizable(false);
 
+        btnCustomerRegister.setBackground(new java.awt.Color(255, 0, 0));
+        btnCustomerRegister.setFont(new java.awt.Font("MV Boli", 0, 14)); // NOI18N
+        btnCustomerRegister.setForeground(new java.awt.Color(0, 0, 0));
         btnCustomerRegister.setText("Cadastrar Cliente");
         btnCustomerRegister.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -40,32 +46,38 @@ public class MenuInicial extends javax.swing.JFrame {
             }
         });
 
+        btnOrderRegister.setBackground(new java.awt.Color(255, 0, 0));
+        btnOrderRegister.setFont(new java.awt.Font("MV Boli", 0, 14)); // NOI18N
+        btnOrderRegister.setForeground(new java.awt.Color(0, 0, 0));
         btnOrderRegister.setText("Cadastrar Pedido");
 
-        jLabel1.setText("Bem Vindo!");
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemaifome/imagem/Screenshot_4.png"))); // NOI18N
+        jLabel2.setText("jLabel2");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(136, 136, 136)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnOrderRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCustomerRegister))
-                .addContainerGap(147, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 139, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnCustomerRegister)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnOrderRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(139, 139, 139))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(56, 56, 56)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnCustomerRegister)
-                .addGap(18, 18, 18)
-                .addComponent(btnOrderRegister)
-                .addContainerGap(118, Short.MAX_VALUE))
+                .addGap(79, 79, 79)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(65, 65, 65)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnOrderRegister)
+                    .addComponent(btnCustomerRegister))
+                .addContainerGap(86, Short.MAX_VALUE))
         );
 
         pack();
@@ -113,6 +125,6 @@ public class MenuInicial extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCustomerRegister;
     private javax.swing.JButton btnOrderRegister;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }
